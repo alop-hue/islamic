@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon X Browser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar glass">
+        <div class="brand">
+          <div class="logo">🦅</div>
+          <div>
+            <h1>Falcon X</h1>
+            <p>متصفح فائق الذكاء</p>
+          </div>
+        </div>
+
+        <section>
+          <h2>الخصوصية</h2>
+          <label class="toggle">
+            <input type="checkbox" id="adBlock" checked />
+            <span>منع الإعلانات التلقائي</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="trackerBlock" checked />
+            <span>حظر أدوات التتبع</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="fingerprintBlock" checked />
+            <span>حماية البصمة الرقمية</span>
+          </label>
+        </section>
+
+        <section>
+          <h2>التخصيص</h2>
+          <div class="themes">
+            <button data-theme="ocean" class="theme-btn active">محيط</button>
+            <button data-theme="sunset" class="theme-btn">غروب</button>
+            <button data-theme="forest" class="theme-btn">غابة</button>
+          </div>
+          <label for="radius">استدارة الواجهات</label>
+          <input id="radius" type="range" min="8" max="28" value="18" />
+        </section>
+
+        <section>
+          <h2>إحصائيات الحماية</h2>
+          <div class="stats">
+            <p><strong id="blockedAds">128</strong> إعلان تم حظره</p>
+            <p><strong id="blockedTrackers">74</strong> متتبع تم تعطيله</p>
+          </div>
+        </section>
+      </aside>
+
+      <main class="browser-area">
+        <header class="topbar glass">
+          <div class="tabs" id="tabs"></div>
+          <button id="newTab">＋</button>
+        </header>
+
+        <div class="address-row glass">
+          <button class="nav-btn">←</button>
+          <button class="nav-btn">→</button>
+          <button class="nav-btn">⟳</button>
+          <input id="urlInput" value="https://www.falconx.ai" />
+          <button id="goBtn">انتقال</button>
+        </div>
+
+        <section class="content glass" id="contentFrame">
+          <h2>صفحة ديناميكية</h2>
+          <p>
+            هذه تجربة متصفح حديث تشبه كروم مع تركيز قوي على الخصوصية، منع
+            الإعلانات، وسلاسة الواجهة.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>⚡ أداء سريع</h3>
+              <p>محرك مبسط سريع في فتح التبويبات وإدارة الذاكرة.</p>
+            </article>
+            <article class="card ad-slot" id="adSlot">
+              <h3>إعلان ممول</h3>
+              <p>احصل على تخفيضات خاصة اليوم فقط!</p>
+            </article>
+            <article class="card">
+              <h3>🔐 وضع الخصوصية</h3>
+              <p>إزالة ملفات التتبع تلقائياً بعد كل جلسة.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="assistant glass">
+        <h2>مساعد Falcon AI</h2>
+        <p class="sub">جاهز لتلخيص الصفحات، كتابة الرسائل، والمساعدة الفورية.</p>
+        <div class="chat" id="chatBox">
+          <div class="msg ai">مرحباً! كيف أساعدك اليوم؟</div>
+        </div>
+        <form id="chatForm">
+          <input id="chatInput" placeholder="اكتب سؤالك..." />
+          <button>إرسال</button>
+        </form>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
