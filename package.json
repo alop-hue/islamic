@@ -1,0 +1,19 @@
+{
+  "name": "islamic-browser",
+  "version": "1.0.0",
+  "description": "A simple desktop web browser built with Electron (Chromium).",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "lint": "node --check src/main.js src/preload.js"
+  },
+  "keywords": [
+    "browser",
+    "electron",
+    "chromium"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.9"
+  }
+}
